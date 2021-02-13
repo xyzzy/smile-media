@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<!--
+ *  This file is part of smile: ASCII-safe binaries
+ *
+ *  Copyright (C) 2011, 2021, xyzzy@rockingship.org
+ *
+ *  This program is free software: you can redistribute it and/or modify
+ *  it under the terms of the GNU Affero General Public License as published
+ *  by the Free Software Foundation, either version 3 of the License, or
+ *  (at your option) any later version.
+ *
+ *  This program is distributed in the hope that it will be useful,
+ *  but WITHOUT ANY WARRANTY; without even the implied warranty of
+ *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ *  GNU Affero General Public License for more details.
+ *
+ *  You should have received a copy of the GNU Affero General Public License
+ *  along with this program.  If not, see <https://www.gnu.org/licenses/>.
+-->
+<!--
+ * JS-DOS is GPL-2 licensed https://github.com/caiiiycuk/js-dos
+-->
+
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Smile with js-dos 6.22</title>
+	<script src="js-dos.js"></script>
+	<style>
+		canvas {
+			width: 640px;
+			height: 400px;
+		}
+
+		.dosbox-container {
+			padding-bottom: 50px;
+			align-items: normal !important;
+		}
+	</style>
+</head>
+
+<body>
+<h1>Welcome to the Wonderful World of ASCII binaries</h1>
+
+<canvas id="jsdos"></canvas>
+<script>
+	Dos(document.getElementById("jsdos")).ready((fs, main) => {
+		fs.extract("smile.zip").then(() => {
+			main(["-c", "AUTOEXEC.BAT"]).then((ci) => {
+				let isFullscreen = false;
+				const fullscreen = document.createElement("button");
+				fullscreen.style.cssText = `
+					padding-left: 15px;
+					padding-right: 15px;
+					height: 50px;
+					background: lightgray;
+					border-left: 1px solid white;
+					border-top: 1px solid white;
+					border-right: 1px solid darkgray;
+					border-bottom: 1px solid darkgray;
+					position: absolute;
+					bottom: 0;
+					left: 48px;
+					margin-left: 15px;
+				`;
+
+				function toggleFullscreen() {
+					if (!isFullscreen) {
+						ci.fullscreen();
+						fullscreen.innerHTML = "Exit";
+					} else {
+						ci.exitFullscreen();
+						fullscreen.innerHTML = "Fullscreen";
+					}
+
+					isFullscreen = !isFullscreen;
+				};
+				fullscreen.innerHTML = "Fullscreen";
+
+				const fullscreenTouch = function (event) {
+					event.stopPropagation();
+					toggleFullscreen();
+				};
+				fullscreen.addEventListener("touchstart", fullscreenTouch);
+				fullscreen.addEventListener("mousedown", fullscreenTouch);
+
+				ci.getParentDiv().appendChild(fullscreen);
+
+				DosController.Qwerty(ci.getParentDiv(), ci.getKeyEventConsumer(), {
+					uppercase: true,
+					cssText: `
+						.qwerty-key {
+							bottom: 0;
+							left: 0;
+						}
+					`,
+				});
+				DosController.Move(ci.getParentDiv(), ci.getKeyEventConsumer());
+			});
+		});
+	});
+</script>
+
+<p>Below is the highlighted ASCII-art to aid in recognition.</p>
+
+<pre>
+  kx1ck7w17k7s1uh1unk7z1utiqxnz1qxy3jkmynub1ixu60
+  3owuzsmznrowmneram<b>1666546571</b>merunscnwuomumeuucv
+  ncemxcvuaruwvx<b>7422388361469614739</b>vvemvrexowuxrc
+  awavnxaocww<b>1208733290956853622195482</b>znzrnewzeou
+  ocncrvxu<b>1614641256985446093215305849815</b>awcnxame
+  earvmz<b>12564852844486580393974615406098677</b>ecxnsm
+  auvoz<b>06</b>xaw<b>97154</b>ma<b>04792680</b>onm<b>014488</b>ac<b>725657</b>mxxuw
+  oemu<b>96</b>uno<b>1102358</b>we<b>894833</b>snx<b>41240766</b>nm<b>560627</b>vowe
+  oss<b>645</b>ozao<b>94844</b>coa<b>704306</b>vnroe<b>13168</b>nes<b>1039837</b>ezr
+  nmz<b>2356</b>zrzxavavox<b>47115758</b>zrcrscvxrmaw<b>2568072</b>nuv
+  ume<b>37517890068576972056081503960403925894024</b>ozs
+  zrw<b>61264328006535111264548908535116391418993</b>nvx
+  scx<b>114382</b>rnawazseacwrauxmusmrcavccxr<b>02140805</b>noc
+  eznx<b>56022</b>nuzuvxxozmmwcznaxxsewcvzosw<b>0535117</b>evcs
+  movax<b>50229</b>vnoccccnnmeraneaensmaoaaom<b>509823</b>zszrz
+  rvevcs<b>708632</b>snonvcauou<b>155885867</b>axam<b>570222</b>aocccn
+  nmeruszs<b>792683</b>vzsuv<b>60039656384301663046</b>ecoeusom
+  nucrauemuoe<b>71463</b>ra<b>576394864638452947</b>rmmoeveeoxz
+  asemnaoxscwxva<b>0915775396204065820</b>zszreoowwxrmma
+  mznmemueavzaeumnam<b>4641556792</b>mzruaoamarxaczomanx
+  rzrecnvanevrreavxnvcwxcuowavxsmrocwcnrearverezu
+</pre>
+
+<p>Smile project page can be found at <a href="https://github.com/xyzzy/smile">https://github.com/xyzzy/smile</a>.</p>
+
+<p>Thanks to the <a href="https://github.com/caiiiycuk/js-dos">js-dos 6.22</a> project for running DOS programs in a browser.</p>
+
+</body>
+</html>
