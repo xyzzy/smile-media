@@ -1,5 +1,7 @@
 # Welcome to the Wonderful World of ASCII binaries.
 
+*When ASCII art is the executable*
+
 This project contains the media files for project smile [https://github.com/xyzzy/smile](https://github.com/xyzzy/smile)
 
 # Requirements
@@ -19,3 +21,8 @@ Using [SemVer](http://semver.org/) for versioning. For the versions available, s
 
 This project is licensed under the GNU Affero General Public License v3 - see the [LICENSE.txt](LICENSE.txt) file for details
 The presentation platform, js-dos is licensed under the GNU General Public License v2.
+
+## Acknowledgments
+
+* [DOSBox](https://www.dosbox.com) for making it possible to run `smile`.
+* [JS-DOS](https://js-dos.com) for making it possible to run DOSBox in a browser.

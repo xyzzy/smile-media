@@ -7,6 +7,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## [Unreleased]
 
 ```
+2021-02-13 01:22:49 Changed: Added canvas caption.
 2021-02-12 10:54:38 Initial commit.
 ```
 

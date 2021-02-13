@@ -41,8 +41,12 @@
 
 <body>
 <h1>Welcome to the Wonderful World of ASCII binaries</h1>
+<p><i>When the art is the executable</i></p>
+
+<p>Use your keyboard, or the software version behind the button below.</p>
 
 <canvas id="jsdos"></canvas>
+
 <script>
 	Dos(document.getElementById("jsdos")).ready((fs, main) => {
 		fs.extract("smile.zip").then(() => {
@@ -74,7 +78,7 @@
 					}
 
 					isFullscreen = !isFullscreen;
-				};
+				}
 				fullscreen.innerHTML = "Fullscreen";
 
 				const fullscreenTouch = function (event) {
@@ -129,7 +133,7 @@
 
 <p>Smile project page can be found at <a href="https://github.com/xyzzy/smile">https://github.com/xyzzy/smile</a>.</p>
 
-<p>Thanks to the <a href="https://github.com/caiiiycuk/js-dos">js-dos 6.22</a> project for running DOS programs in a browser.</p>
+<p>Thanks to the <a href="https://github.com/caiiiycuk/js-dos">js-dos 6.22</a> project it is possible to run <a href="https://www.dosbox.com">DOSBox</a> in a browser.</p>
 
 </body>
 </html>
