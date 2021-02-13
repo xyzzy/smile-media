@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+```
+2021-02-13 20:24:32 Changed: Updated `smile.com`.
+```
+
 ## Version 1.0.0 2021-02-13 19:19:19
 
 ```
