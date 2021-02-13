@@ -6,9 +6,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## Version 1.0.0 2021-02-13 19:19:19
+
 ```
 2021-02-13 01:22:49 Changed: Added canvas caption.
 2021-02-12 10:54:38 Initial commit.
 ```
 
-[Unreleased]: https://github.com/xyzzy/smile-media/compare/v0.0.0...HEAD
+[Unreleased]: https://github.com/xyzzy/smile-media/compare/v1.0.0...HEAD
