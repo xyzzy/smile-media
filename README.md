@@ -1,10 +1,12 @@
 ---
 layout: home
-title: "smile-media - Media files for &quot;smile&quot;"
+title: "smile-media - Media files for `smile`"
 image: assets/favimage-472x472.jpg
 ---
 
-# Smile
+# smile-media
+
+Media files for `smile` (https://github.com/xyzzy/smile)
 
 ### Welcome to the Wonderful World of ASCII binaries
 
@@ -23,11 +25,13 @@ This project contains the media files for: [https://github.com/xyzzy/smile](http
 
 ## Source code
 
-Grab one of the tarballs at [https://github.com/xyzzy/smile-media/releases](https://github.com/xyzzy/smile-media/releases) or checkout the latest code:
+Checkout the latest code:
 
 ```sh
   git clone https://github.com/xyzzy/smile-media.git
 ```
+
+There are no releases due to their size.
 
 ## Versioning
 
