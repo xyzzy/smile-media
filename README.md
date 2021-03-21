@@ -1,25 +1,41 @@
-# Welcome to the Wonderful World of ASCII binaries.
+---
+layout: home
+title: "smile-media - Media files for &quot;smile&quot;"
+image: assets/favimage-472x472.jpg
+---
+
+# Smile
+
+### Welcome to the Wonderful World of ASCII binaries
 
 *When ASCII art is the executable*
 
-This project contains the media files for project smile [https://github.com/xyzzy/smile](https://github.com/xyzzy/smile)
+This project contains the media files for: [https://github.com/xyzzy/smile](https://github.com/xyzzy/smile)
 
-# Requirements
+## Requirements
 
-* `smile.com` ASCII binary, the main poject.  [https://github.com/xyzzy/smile](https://github.com/xyzzy/smile)
+* `smile.com` ASCII binary, the main project.  [https://github.com/xyzzy/smile](https://github.com/xyzzy/smile)
 * `jsdos` For running DOS programs from a browser.  [https://github.com/caiiiycuk/js-dos](https://github.com/caiiiycuk/js-dos)
 
-# Building
+## Building
 
-- Add `smile.com` to `smile.zip`.
+- Add `smile.com` (and othe DOS files) to `smile.zip`.
 
-# Versioning
+## Source code
+
+Grab one of the tarballs at [https://github.com/xyzzy/smile-media/releases](https://github.com/xyzzy/smile-media/releases) or checkout the latest code:
+
+```sh
+  git clone https://github.com/xyzzy/smile-media.git
+```
+
+## Versioning
 
 Using [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/xyzzy/smile-media/tags).
 
-# License
+## License
 
-This project is licensed under the GNU Affero General Public License v3 - see the [LICENSE.txt](LICENSE.txt) file for details
+This project is licensed under the GNU General Public License v3 - see the [LICENSE.txt](LICENSE.txt) file for details
 The presentation platform, js-dos is licensed under the GNU General Public License v2.
 
 ## Acknowledgments
