@@ -8,6 +8,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 Media repositories have no releases due to their size.
 
 ```
+2021-03-23 17:39:46 Changed: Order items in navbar.
 2021-03-21 13:56:12 Changed: Modernized SEO headers.
 2021-03-20 01:25:31 Added: `moonwalk` theme.
 2021-02-13 20:24:32 Changed: Updated `smile.com`.
